@@ -1,0 +1,246 @@
+:root {
+    --soccer-green: #00b894;
+    --pitch-dark: #2d3436;
+    --stadium-gray: #f4f7f6;
+    --error-red: #ff7675;
+    --white: #ffffff;
+    --bubble-gray: #f1f2f6;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--stadium-gray);
+    color: var(--pitch-dark);
+  }
+  
+  /* --- Layout & Container --- */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* --- Navbar Styles --- */
+  .navbar {
+    background-color: var(--soccer-green);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .nav-item {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  
+  .create-btn-nav {
+    background-color: var(--white);
+    color: var(--soccer-green);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+  
+  /* --- Feed & Header --- */
+  .feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .search-input {
+    padding: 12px 20px;
+    width: 320px;
+    border: 2px solid #dfe6e9;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .sort-section button {
+    margin-left: 10px;
+    padding: 8px 18px;
+    border: 2px solid var(--soccer-green);
+    background: transparent;
+    color: var(--soccer-green);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .sort-section button.active-sort {
+    background: var(--soccer-green);
+    color: white;
+  }
+  
+  /* --- Post Cards & Grid --- */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .post-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .post-card h3 {
+    margin: 10px 0;
+    color: var(--pitch-dark);
+  }
+  
+  .time {
+    font-size: 0.85rem;
+    color: #636e72;
+  }
+  
+  /* --- Post Details Page --- */
+  .post-details {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+  .post-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .upvote-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .upvote-btn {
+    background: #e1f5fe;
+    border: 1px solid var(--soccer-green);
+    color: var(--soccer-green);
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* --- Comments Section --- */
+  .comments-section {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .comments-list {
+    margin: 20px 0;
+  }
+  
+  .comment-bubble {
+    background: var(--bubble-gray);
+    padding: 12px 18px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    width: fit-content;
+    max-width: 85%;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .comment-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .comment-form input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+  }
+  
+  .comment-form button {
+    background-color: var(--soccer-green);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* --- Forms (Create/Edit) --- */
+  .form-page {
+    background: var(--white);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 100px;
+    color: var(--soccer-green);
+  }
