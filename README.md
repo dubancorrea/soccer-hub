@@ -33,7 +33,7 @@ Stretch Features
 
 Video Walkthrough
 Here's a walkthrough of the implemented user stories:
-<img src='SoccerHubWalk.gif' title='SoccerHub Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./public/SoccerHubWalk.gif' title='SoccerHub Walkthrough' width='' alt='Video Walkthrough' />
 
 Notes
 The biggest challenge was ensuring the state stayed in sync between the Home Feed and the Post Details page, especially when upvoting. I used Supabase's .select().single() to ensure that the app always had the most recent data after an update.
